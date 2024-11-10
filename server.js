@@ -1,9 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import pg from 'pg';
 
-const port = 3001;
-const { Pool } = pg;
+const port = process.env.PORT || 3001;
 const app = express();
 app.use(cors());
 app.get('/', (req, res) => {
